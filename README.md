@@ -1,4 +1,4 @@
-# fishing-facebook
+# phishing-facebook
 Facebook phishing project at Node.JS
 Project is a fake Facebook login screen. All form data will be saved there is a text file. After making the supposed "login" you will be redirected to the official website of Facebook.<br/><br/>
 _Please use this for knowledge only. Don't use this for evil. We don't like bad people :(_
